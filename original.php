@@ -1,0 +1,34 @@
+<?php
+$comp_ip = $_SERVER['REMOTE_ADDR'];
+$comp_host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+$comp_port = $_SERVER['REMOTE_PORT'];
+$server_ip = $_SERVER['SERVER_ADDR'];
+$server_name = $_SERVER['SERVER_NAME'];
+$server_port = $_SERVER['SERVER_PORT'];
+$server_software = $_SERVER['SERVER_SOFTWARE'];
+$server_protocol = $_SERVER['SERVER_PROTOCOL'];
+$browser_name = "<script>document.write(navigator.appName);</script>";
+$browser_version = $_SERVER['HTTP_USER_AGENT'];
+echo "<h3>Computer:</h3>";
+echo "<table>";
+echo "<col style='width: 150px'>";
+echo "<tr><td>IP</td><td>$comp_ip</td></tr>";
+echo "<tr><td>Host</td><td>$comp_host</td></tr>";
+echo "<tr><td>Port</td><td>$comp_port</td></tr>";
+echo "</table>";
+echo "<h3>Server:</h3>";
+echo "<table>";
+echo "<col style='width: 150px'>";
+echo "<tr><td>Name</td><td>$server_name</td></tr>";
+echo "<tr><td>IP</td><td>$server_ip</td></tr>";
+echo "<tr><td>Port</td><td>$server_port</td></tr>";
+echo "<tr><td>Software</td><td>$server_software</td></tr>";
+echo "<tr><td>Protokoll</td><td>$server_protocol</td></tr>";
+echo "</table>";
+echo "<h3>Browser:</h3>";
+echo "<table>";
+echo "<col style='width: 150px'>";
+echo "<tr><td>Name</td><td>$browser_name</td></tr>";
+echo "<tr><td>Version</td><td>$browser_version</td></tr>";
+echo "</table>";
+?>
